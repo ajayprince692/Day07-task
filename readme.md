@@ -1,0 +1,1 @@
+Day07 task includes printing name, capital, flag, using forEach function, Get all the countries from Asia continent /region using Filter function, countries with a population of less than 2 lakhs using Filter function, Total population using reduce function, country that uses US dollars as currency
