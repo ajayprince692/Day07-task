@@ -42,7 +42,7 @@ request3.send();
 request3.onload=function(){
     var data3=request3.response;
     var res3=JSON.parse(data3);
-    var result2=res3.reduce((acc,crr)=>(acc+crr).population, 0);
+    var result2=res3.reduce((acc,crr)=>acc+crr.population, 0);
     console.log(`total population :${result2}`);
   
 }
@@ -55,7 +55,8 @@ request4.send();
 request4.onload=function(){
     var data4=request4.response;
     var res4=JSON.parse(data4);
-    var result3=res4.filter((x3)=>x3.currencies.USD.name=="United States dollar");
+    var result3=res4.filter((x3)=>x3.currencies && x3.currencies.USD);
     console.log(result3);
+    result3.forEach((x3)=>console.log(x3.name.common));
    
 }
