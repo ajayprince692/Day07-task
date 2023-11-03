@@ -38,11 +38,12 @@ request2.onload=function(){
 
 var request3=new XMLHttpRequest;
 request3.open("GET","https://restcountries.com/v3.1/all","true");
-request3.send;
+request3.send();
 request3.onload=function(){
     var data3=request3.response;
     var res3=JSON.parse(data3);
-    var result2=res3.reduce((acc,crr)=>`total population: ${acc+crr.population,o}` );
+    var result2=res3.reduce((acc,crr)=>(acc+crr).population, 0);
+    console.log(`total population :${result2}`);
   
 }
 
